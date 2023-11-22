@@ -21,37 +21,55 @@ import { ConnectComponent } from './connect/connect.component';
     trigger('fade', [
       transition(':enter', [
         style({ opacity: 0 }),
-        animate(1000, style({ opacity: 1 }))
+        animate("600ms 700ms", style({ opacity: 1 }))
       ]),
       transition(':leave', [
         style({ opacity: 1 }),
-        animate(1000, style({ opacity: 0 }))
+        animate("600ms", style({ opacity: 0 }))
       ]),
     ]),
+    trigger('fadeSlide', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateX(-400px)' }),
+        animate(
+          1500,
+          style({ opacity: 1, transform: 'translateX(0)' })
+        )
+      ]),
+      transition(':leave', [
 
+        animate(
+          1500,
+          style({ opacity: 0, transform: 'translateX(-400px)' })
+        )
+      ])]),
   ]
 })
 
 export class AppComponent {
   title = 'portfoliopageapp';
+  showMenu: boolean = false;
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+  }
 
   showAbout: boolean = true;
   showProjects: boolean = false;
-  showConnect: boolean = false;
+  showContact: boolean = false;
 
   openProjects() {
-    this.showAbout = false;
     this.showProjects = true;
-    this.showConnect = false;
+    this.showAbout = false;
+    this.showContact = false;
   }
-  openConnect() {
+  openContact() {
+    this.showContact = true;
     this.showAbout = false;
     this.showProjects = false;
-    this.showConnect = true;
   }
   openMain() {
     this.showAbout = true;
     this.showProjects = false;
-    this.showConnect = false;
+    this.showContact = false;
   }
 }
