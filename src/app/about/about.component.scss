@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(66, 99, 88);
+}
+
+h1 {
+    font-family: "Merienda";
+    font-style: italic;
+    padding: 1rem;
+    font-size: 3.125rem;
+    color: rgb(199, 230, 219);
+    font-weight: bold;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    color: var(--gray-700);
+}
+
+main {
+    background-color: rgb(66, 99, 88);
+    width: 100vw;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: inherit;
+    position: relative;
+}
+
+
+
+.page {
+    height: max-content;
+    justify-items: center;
+}

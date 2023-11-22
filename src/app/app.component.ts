@@ -2,11 +2,18 @@ import { Component, HostBinding } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { trigger, state, transition, style, animate } from '@angular/animations';
+import { ProjectsComponent } from './projects/projects.component';
+import { AboutComponent } from './about/about.component';
+import { ConnectComponent } from './connect/connect.component';
 @Component({
-  selector: 'app-root',
+  selector: 'mainPage',
   standalone: true,
   imports: [
-    CommonModule, RouterOutlet
+    CommonModule,
+    RouterOutlet,
+    ProjectsComponent,
+    AboutComponent,
+    ConnectComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
@@ -27,14 +34,24 @@ import { trigger, state, transition, style, animate } from '@angular/animations'
 
 export class AppComponent {
   title = 'portfoliopageapp';
-  showLooseText: boolean = false;
 
-  toggleText() {
-    this.showLooseText = !this.showLooseText;
+  showAbout: boolean = true;
+  showProjects: boolean = false;
+  showConnect: boolean = false;
+
+  openProjects() {
+    this.showAbout = false;
+    this.showProjects = true;
+    this.showConnect = false;
   }
-  showLooseText2: boolean = false;
-
-  toggleText2() {
-    this.showLooseText2 = !this.showLooseText2;
+  openConnect() {
+    this.showAbout = false;
+    this.showProjects = false;
+    this.showConnect = true;
+  }
+  openMain() {
+    this.showAbout = true;
+    this.showProjects = false;
+    this.showConnect = false;
   }
 }
