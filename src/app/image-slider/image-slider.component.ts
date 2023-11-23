@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 
@@ -5,7 +6,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
   selector: 'app-image-slider',
   standalone: true,
   templateUrl: './image-slider.component.html',
-  imports: [SlickCarouselModule],
+  styleUrl: './image-slider.component.scss',
+  imports: [SlickCarouselModule, CommonModule],
 })
 export class ImageSliderComponent {
   images = [
@@ -26,13 +28,15 @@ export class ImageSliderComponent {
   ];
 
   sliderConfig = {
+    // "slidesToShow": 4, "slidesToScroll": 4
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
     arrows: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2500,
   };
+
 }
 
 
