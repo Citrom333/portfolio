@@ -22,11 +22,9 @@ export class ContactComponent {
       .subscribe({
         next: response => {
           console.log('Sikeres POST kérés:', response);
-          // Itt további logikát vagy kezelést tehetsz meg a válasz alapján
         },
         error: error => {
           console.error('Hiba a POST kérés során:', error);
-          // Itt további hiba kezelést tehetsz meg
         }
       });
   }
