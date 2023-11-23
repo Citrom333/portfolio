@@ -89,7 +89,7 @@ main {
 .about {
 
     color: rgb(199, 230, 219);
-    padding: 2rem;
+    // padding: 2rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
@@ -106,15 +106,16 @@ main {
 }
 
 .mygif {
+    margin-top: 8rem;
     max-width: 55vw;
 }
 
 .mypic {
     display: flex;
-    max-width: 20rem;
-    max-height: 20rem;
+    max-width: 27rem;
+    max-height: 27rem;
     border-radius: 50%;
-
+    margin-top: 5rem;
 }
 
 .left-side {
