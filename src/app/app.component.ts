@@ -4,7 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { trigger, state, transition, style, animate } from '@angular/animations';
 import { ProjectsComponent } from './projects/projects.component';
 import { AboutComponent } from './about/about.component';
-import { ConnectComponent } from './connect/connect.component';
+import { ContactComponent } from './contact/contact.component';
 @Component({
   selector: 'mainPage',
   standalone: true,
@@ -13,7 +13,7 @@ import { ConnectComponent } from './connect/connect.component';
     RouterOutlet,
     ProjectsComponent,
     AboutComponent,
-    ConnectComponent
+    ContactComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
