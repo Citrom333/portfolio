@@ -1,0 +1,19 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-family: 'Inder', sans-serif;
+    // line-height: 28px;
+    margin-bottom: 15px;
+    color: rgb(199, 230, 219);
+    // padding: 1rem;
+    font-size: 2.125rem;
+    // color: rgb(199, 230, 219);
+    // font-weight: bold;
+    line-height: 100%;
+    letter-spacing: 0.125rem;
+    // margin: 0;
+}

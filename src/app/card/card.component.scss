@@ -1,0 +1,17 @@
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    max-width: 100vw;
+    margin: auto;
+    gap: 1rem;
+}
+
+.card {
+    max-width: 28vw;
+    padding: 20px;
+}
+
+.card img {
+    max-width: inherit;
+}
