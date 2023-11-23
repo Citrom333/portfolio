@@ -1,10 +1,10 @@
-<p>contact works!</p>
-<form #emailForm="ngForm" (ngSubmit)="onEmailSend(emailForm.value)">
+<h2>Contact me!</h2>
+<form class="form" #emailForm="ngForm" (ngSubmit)="onEmailSend(emailForm.value)">
     <label>Your e-mail address</label>
     <input type="email" name="senderMail" ngModel>
     <label>Subject</label>
     <input type="text" name="subject" ngModel>
     <label>Message</label>
-    <input type="text" name="message" ngModel>
-    <input type="submit" value="Send">
+    <textarea id="messageinput" type="text" name="message" ngModel rows="4" cols="50"></textarea>
+    <input id="submitbutton" type="submit" value="Send">
 </form>
