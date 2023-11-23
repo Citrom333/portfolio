@@ -9,5 +9,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
+  backendUrl = "http://localhost:3500";
   @Input() projects: { description: { title: string | undefined, link1: string | undefined, link2: string | undefined, about: string | undefined }, image: { src: string; alt: string } }[] = [];
 }

@@ -1,7 +1,7 @@
 <div class="cardContainer">
     <div class="card" *ngFor="let project of projects">
         <img src="{{ project.image.src }}" alt="{{ project.image.alt }}" class="slideimage">
-        <p>{{project.description.title}}</p>
+        <h3>{{project.description.title}}</h3>
         <a href={{project.description.link1}} aria-label="Github" target="_blank" rel="noopener">
             <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" alt="Github">
                 <path
@@ -9,7 +9,7 @@
             </svg>
         </a>
         <a href={{project.description.link2}} aria-label="Github" target="_blank" rel="noopener">
-            <p>Link</p>
+            <p *ngIf="project.description.link2 !== ''">Link</p>
         </a>
         <p>{{project.description.about}}</p>
 
