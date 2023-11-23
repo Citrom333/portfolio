@@ -1,1 +1,10 @@
 <p>contact works!</p>
+<form #emailForm="ngForm" (ngSubmit)="onEmailSend(emailForm.value)">
+    <label>Your e-mail address</label>
+    <input type="email" name="senderMail" ngModel>
+    <label>Subject</label>
+    <input type="text" name="subject" ngModel>
+    <label>Message</label>
+    <input type="text" name="message" ngModel>
+    <input type="submit" value="Send">
+</form>
