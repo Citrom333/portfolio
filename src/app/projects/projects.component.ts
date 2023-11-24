@@ -10,7 +10,7 @@ import { CardComponent } from '../card/card.component';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-  backendUrl = "http://localhost:3500";
+  backendUrl = "/api";
   parentProjects = [
     { description: { title: "Family Organizer", link1: "https://github.com/Citrom333/OrganizeYourFamily", link2: "https://familyorganizer.xyz", about: "My last pet project has a C# backend, and JS frontend. The idea was to create an application for families with a common calendar to organize tasks and programs. It handles MSSQL database, and uses authentication and authorization." }, image: { src: "../../assets/projectpics/projectimage05.png", alt: 'Image 2' } },
     { description: { title: "Family Organizer for mobile", link1: "https://github.com/Citrom333/OrganizeYourFamily", link2: `${this.backendUrl}/download`, about: "I used Capacitor framework by Ionic to make a mobile Native mobile application of my webapp. You can download it by clicking the link." }, image: { src: "../../assets/projectpics/projectimage14.png", alt: 'Image 4' } },

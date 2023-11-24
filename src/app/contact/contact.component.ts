@@ -18,7 +18,7 @@ export class ContactComponent {
     console.log(email);
     const requestBody: any = { subject: email.subject, text: `${email.message} FROM ${email.senderMail}` };
     console.log(requestBody);
-    this.http.post("http://localhost:3500/send-email", requestBody)
+    this.http.post("/api/send-email", requestBody)
       .subscribe({
         next: response => {
           console.log('Sikeres POST kérés:', response);
