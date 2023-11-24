@@ -7,12 +7,16 @@ require('dotenv').config();
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 app.use(cors());
 app.use(express.json());
-// Define route for file download
+
+app.get('/actuator/health', (req, res) => {
+    res.json({ status: 'UP' });
+});
+
 app.get('/download', (req, res) => {
 
     res.download('familyOrg.apk', (err) => {
         if (err) {
-            // Hiba esetén kezeljük le
+
             console.error('Error downloading file:', err);
             res.status(500).send('Internal Server Error');
         }
