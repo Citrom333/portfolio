@@ -14,6 +14,7 @@ export class ContactComponent {
   constructor(private http: HttpClient) {
 
   }
+  message: string = "";
   onEmailSend(email: { senderMail: string, subject: string, message: string }) {
     console.log(email);
     const requestBody: any = { subject: email.subject, text: `${email.message} FROM ${email.senderMail}` };
@@ -21,10 +22,12 @@ export class ContactComponent {
     this.http.post("/api/send-email", requestBody)
       .subscribe({
         next: response => {
-          console.log('Sikeres POST kérés:', response);
+          this.message = "Success";
+          // console.log('Sikeres POST kérés:', response);
         },
         error: error => {
-          console.error('Hiba a POST kérés során:', error);
+          this.message = "Something went wrong";
+          // console.error('Hiba a POST kérés során:', error);
         }
       });
   }
